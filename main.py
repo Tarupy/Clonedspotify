@@ -26,9 +26,9 @@ class Main:
         logo = '''                                            ____ ___  ____ ___ _ ____ _   _       
                                             [__  |__] |  |  |  | |___  \_/        
                                             ___] |    |__|  |  | |      |         
-                                      ____ _    _  _ ____ ____ ____ ___ ____ ____ 
-                                      |  | |    |    |___ |__/                    
-                                      |__] |___ |    |___ |  \                    '''
+                                      ____ ____ _  _ ____ ____ ____ ___ ____ ____ 
+                                      | __ |___ |\ | |___ |__/ |__|  |  |  | |__/ 
+                                      |__] |___ | \| |___ |  \ |  |  |  |__| |  \ '''
 
         print('%s%s' % (green(), logo))
 
@@ -119,7 +119,7 @@ class Main:
 
     def creator(self, proxy):
         email = '%s@%s' % (''.join(choice(ascii_lowercase + digits) for _ in range(randint(7, 10))), choice(domains))
-        password = "parkshit01"
+        password = ''.join(choice(ascii_letters + digits) for _ in range(randint(8, 14)))
         birth_year = randint(1970, 2005)
         birth_month = randint(1, 12)
         birth_day = randint(1, 28)
